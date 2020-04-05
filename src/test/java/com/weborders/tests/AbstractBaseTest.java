@@ -25,6 +25,7 @@ public class AbstractBaseTest {
 
     @BeforeMethod
     public void setup() {
+        driver = Driver.getDriver();
         driver.get(ConfigurationReader.getProperty("url"));
         driver.manage().window().maximize();
 
